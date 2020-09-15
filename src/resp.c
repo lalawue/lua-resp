@@ -366,18 +366,18 @@ static int encode2string( lua_State *L, int idx, lua_State *stack )
             }
         // bulk string
         default:
-            // check string value
-            for(; cur < len; cur++ )
-            {
-                switch( str[cur] ){
-                    case CR:
-                    case LF:
-                        lua_settop( L, 0 );
-                        lua_pushnil( L );
-                        lua_pushstring( L, "string cannot containe a CR or LF" );
-                        return -1;
-                }
-            }
+            // check string value, but bulk string ignore CR and LR
+            // for(; cur < len; cur++ )
+            // {
+            //     switch( str[cur] ){
+            //         case CR:
+            //         case LF:
+            //             lua_settop( L, 0 );
+            //             lua_pushnil( L );
+            //             lua_pushstring( L, "string cannot containe a CR or LF" );
+            //             return -1;
+            //     }
+            // }
 
             if( bulk ){
                 lua_pushfstring( stack, "$%d\r\n", len );
