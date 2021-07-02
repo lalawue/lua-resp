@@ -1,7 +1,8 @@
 package = 'lua-resp'
-version = 'scm-1'
+version = '0.5.4-1'
 source = {
-   url = 'git+https://gitee.com/lalawue/lua-resp.git'
+   url = 'git+https://github.com/lalawue/lua-resp.git',
+   tag = '0.5.4'
 }
 description = {
    summary = 'RESP (REdis Serialization Protocol) parser module',
