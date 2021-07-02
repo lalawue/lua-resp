@@ -4,6 +4,12 @@ RESP (REdis Serialization Protocol) parser module.
 
 **NOTE: this module is under heavy development.**
 
+install from [LuaRocks](https://luarocks.org/)
+
+```sh
+$ luarocks install lua-resp
+```
+
 ---
 
 ## resp module
